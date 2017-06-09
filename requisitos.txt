@@ -1,0 +1,26 @@
+Nome cliente
+Data entrega
+Nome recebedor
+Nota Fiscal
+Conhec aéreo
+Conhec rodov
+Peso
+Qtde volume
+Valor a receber
+Valor pago
+Cidade 
+Estado
+
+
+nome_cliente
+data_entrega
+nome_recebedor
+nota_fiscal
+conhecimento_aereo
+conhecimento_rodoviario
+peso
+qtd_volume
+valor_a_receber
+valor_pago
+cidade 
+estado

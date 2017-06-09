@@ -49,21 +49,90 @@
             <div class="page-header">
                 <h1>Entregas Avulsas <small>< conteudo ></small></h1>
             </div>
-            <form class="form-signin">
-                <label for="inputEmail" class="sr-only"><h1><small>Email address</small></h1></label>
-                    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div class="checkbox">
+            <form class="form-signin" method="POST" target="_self" autocomplete="off">
+                <label for="nome_cliente" class="sr-only"><h1><small>nome_cliente</small></h1></label>
+                    <input type="text"`pattern="[A-Za-z]+" id="nome_cliente" name="nome_cliente" class="form-control" placeholder="nome_cliente"> <!--autofocus -->
+                
+                <label for="data_entrega" class="sr-only"><h1><small>data_entrega</small></h1></label>
+                    <input type="date" id="data_entrega" name="data_entrega" class="form-control" placeholder="data_entrega" min="2017-06-01">
+                
+                <label for="nome_recebedor" class="sr-only"><h1><small>nome_recebedor</small></h1></label>
+                    <input type="text" id="nome_recebedor" name="nome_recebedor" class="form-control" placeholder="nome_recebedor">
+                
+                <label for="nota_fiscal" class="sr-only"><h1><small>nota_fiscal</small></h1></label>
+                    <input type="text" id="nota_fiscal" name="nota_fiscal" class="form-control" placeholder="nota_fiscal">
+                
+                <label for="conhecimento_aereo" class="sr-only"><h1><small>conhecimento_aereo</small></h1></label>
+                    <input type="text" id="conhecimento_aereo" name="conhecimento_aereo" class="form-control" placeholder="conhecimento_aereo">
+                
+                <label for="conhecimento_rodoviario" class="sr-only"><h1><small>conhecimento_rodoviario</small></h1></label>
+                    <input type="text" id="conhecimento_rodoviario" name="conhecimento_rodoviario" class="form-control" placeholder="conhecimento_rodoviario">
+                
+                <label for="peso" class="sr-only"><h1><small>peso</small></h1></label>
+                    <input type="number" id="peso" name="peso" class="form-control" placeholder="peso"> KG
+                
+                <label for="qtd_volume" class="sr-only"><h1><small>qtd_volume</small></h1></label>
+                    <input type="number" id="qtd_volume" name="qtd_volume" class="form-control" placeholder="qtd_volume" min="1"> Unid
+                
+                <label for="valor_a_receber" class="sr-only"><h1><small>valor_a_receber</small></h1></label>
+                    <input type="number" min="0.00" max="10000.00" step="0.01" id="valor_a_receber" name="valor_a_receber" class="form-control" placeholder="valor_a_receber"> Reais
+                
+                <label for="valor_pago" class="sr-only"><h1><small>valor_pago</small></h1></label>
+                    <input type="number" min="0.00" max="10000.00" step="0.01" id="valor_pago" name="valor_pago" class="form-control" placeholder="valor_pago"> Reais
+                    
+                
+                <label for="cidade" class="sr-only"><h1><small>cidade</small></h1></label>
+                    <input type="text" id="cidade" name="cidade" class="form-control" placeholder="cidade">
+                
+                <label for="estado" class="sr-only"><h1><small>estado</small></h1></label>
+                    <select id="estado" name="estado" class="form-control">
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO" selected="selected">Tocantins</option>
+                    </select>
+                
+                <label for="entregador" class="sr-only"><h1><small>entregador</small></h1></label>
                     <label>
-                        <input type="checkbox" value="remember-me"> Remember me
+                        <select id="entregador" name="entregador">
+                            <option value="marco" selected="selected">Marco</option>
+                            <option value="joao">Joao</option>
+                        </select>
                     </label>
-                </div>
                 <input class="btn btn-lg btn-primary btn-block" type="submit"/>
+                <input type="reset">
             </form>
             <div class="jumbotron">
-                <h1></h1>
-                <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+                    <summary>Copyright 2012-2017.</summary>
+                    <address>
+                    <p>by <a href="http://perfil.joaoantoniosantos.com.br">Joao Antonio Santos</a>.<br>
+                        <a href="http://joaoantoniosantos.com.br">Joaoantoniosantos.com.br</a> - Palmas - Tocantins - Brasil
+                    </p>
+                </address>
             </div>
         </div> <!-- /container -->
 
