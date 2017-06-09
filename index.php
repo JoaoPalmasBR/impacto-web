@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Avulsas</title>
+        <title>Entregas Avulsas</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="Entregas Avulsas da Impacto Transportes">
+        <meta name="author" content="Joao Antonio Santos">
         <!-- Le styles -->
         <link href="bootstrap.css" rel="stylesheet">
         <style>
@@ -34,12 +34,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="#">Impacto Transportes</a>
+                    <a class="brand" href="http://impacto.joaoantoniosantos.com.br/">Impacto Transportes</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">Entregas Avulsas</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li class="active"><a href="http://impacto.joaoantoniosantos.com.br/entregas/avulso/">Nova</a></li>
+                            <!-- <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li> -->
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -47,7 +47,7 @@
         </div>
         <div class="container">
             <div class="page-header">
-                <h1>Entregas Avulsas <small>< conteudo ></small></h1>
+                <h1>Entregas Avulsas <small>Formulario de Registro de novas entregas feitas de forma avulsa.</small></h1>
             </div>
             <form class="form-signin" method="POST" target="_self" autocomplete="off">
                 <label for="nome_cliente" class="sr-only"><h1><small>nome_cliente</small></h1></label>
@@ -115,7 +115,6 @@
                         <option value="SE">Sergipe</option>
                         <option value="TO" selected="selected">Tocantins</option>
                     </select>
-                
                 <label for="entregador" class="sr-only"><h1><small>entregador</small></h1></label>
                     <label>
                         <select id="entregador" name="entregador">
@@ -135,7 +134,6 @@
                 </address>
             </div>
         </div> <!-- /container -->
-
         <!-- Le javascript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
