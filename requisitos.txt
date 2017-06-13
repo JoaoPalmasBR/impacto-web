@@ -10,6 +10,7 @@ Valor a receber
 Valor pago
 Cidade 
 Estado
+entregador
 
 
 nome_cliente
@@ -22,5 +23,6 @@ peso
 qtd_volume
 valor_a_receber
 valor_pago
-cidade 
+cidade
 estado
+entregador
