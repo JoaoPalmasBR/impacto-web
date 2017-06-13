@@ -32,7 +32,8 @@
     VALUES ('$nome_cliente','$data_entrega','$nome_recebedor','$nota_fiscal','$conhecimento_aereo',
     '$conhecimento_rodoviario','$peso','$qtd_volume','$valor_a_receber','$valor_pago','$cidade',
     '$estado','$entregador');";
-    $mysqli = new mysqli('localhost', 'root', '', 'impactotransportes');
+    //$mysqli = new mysqli('localhost', 'root', '', 'impactotransportes');
+    $mysqli = new MySQLi('joaoantoniosantos.com.br','joaoa870_joao','joaoantonio2012','joaoa870_impacto');
     $mysqli->query($query);
 ?>
 <!DOCTYPE html>
