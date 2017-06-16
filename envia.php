@@ -2,6 +2,7 @@
     $nome_cliente=$_POST['nome_cliente'];
     $data_entrega=$_POST['data_entrega'];
     $nome_recebedor=$_POST['nome_recebedor'];
+    $campanha=$_POST['campanha'];
     $nota_fiscal=$_POST['nota_fiscal'];
     $conhecimento_aereo=$_POST['conhecimento_aereo'];
     $conhecimento_rodoviario=$_POST['conhecimento_rodoviario'];
@@ -12,24 +13,10 @@
     $cidade=$_POST['cidade'];
     $estado=$_POST['estado'];
     $entregador=$_POST['entregador'];
-    
-    $nome_cliente;
-    $data_entrega;
-    $nome_recebedor;
-    $nota_fiscal;
-    $conhecimento_aereo;
-    $conhecimento_rodoviario;
-    $peso;
-    $qtd_volume;
-    $valor_a_receber;
-    $valor_pago;
-    $cidade;
-    $estado;
-    $entregador;
 
-    $query="INSERT INTO avulsas (nome_cliente,data_entrega,nome_recebedor,nota_fiscal,conhecimento_aereo,
+    $query="INSERT INTO avulsas (nome_cliente,data_entrega,nome_recebedor,campanha,nota_fiscal,conhecimento_aereo,
     conhecimento_rodoviario,peso,qtd_volume,valor_a_receber,valor_pago,cidade,estado,entregador)
-    VALUES ('$nome_cliente','$data_entrega','$nome_recebedor','$nota_fiscal','$conhecimento_aereo',
+    VALUES ('$nome_cliente','$data_entrega','$nome_recebedor','$campanha','$nota_fiscal','$conhecimento_aereo',
     '$conhecimento_rodoviario','$peso','$qtd_volume','$valor_a_receber','$valor_pago','$cidade',
     '$estado','$entregador');";
     //$mysqli = new mysqli('localhost', 'root', '', 'impactotransportes');
@@ -73,11 +60,13 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="brand" href="http://impacto.joaoantoniosantos.com.br/">Impacto Transportes</a>
+                    <!-- <a class="brand" href="http://localhost/joaoantoniosantos/impacto/">Impacto Transportes</a> -->
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="active"><a href="http://impacto.joaoantoniosantos.com.br/entregas/avulso/">Nova</a></li>
-                            <!-- <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li> -->
+                            <li><a href="http://impacto.joaoantoniosantos.com.br/entregas/avulso/lista">About</a></li>
+                            <!--<li class="active"><a href="http://localhost/joaoantoniosantos/impacto/entregas/avulso/">Nova</a></li>
+                            <li><a href="http://localhost/joaoantoniosantos/impacto/entregas/avulso/historico">Historico</a></li>-->
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -91,6 +80,8 @@
                 <dd>".$data_entrega."</dd>";
             echo "<dt>nome_recebedor:</dt> 
                 <dd>".$nome_recebedor."</dd>";
+            echo "<dt>campanha:</dt> 
+                <dd>".$campanha."</dd>";
             echo "<dt>nota_fiscal:</dt> 
                 <dd>".$nota_fiscal."</dd>";
             echo "<dt>conhecimento_aereo:</dt> 

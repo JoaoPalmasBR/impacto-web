@@ -67,3 +67,4 @@ ALTER TABLE `avulsas`
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 INSERT INTO `avulsas` (`id`, `nome_cliente`, `data_entrega`, `nome_recebedor`, `nota_fiscal`, `conhecimento_aereo`, `conhecimento_rodoviario`, `peso`, `qtd_volume`, `valor_a_receber`, `valor_pago`, `cidade`, `estado`, `entregador`) VALUES (NULL, 'Um', '2017-06-13', 'Um', 'Um', 'Um', 'Um', '50.5', '2', '600', '450', 'Palmas', 'TO', 'Joao');
+ALTER TABLE `avulsas` ADD `campanha` VARCHAR(200) NULL AFTER `nome_recebedor`;

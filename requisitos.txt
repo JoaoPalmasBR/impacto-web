@@ -1,6 +1,7 @@
 Nome cliente
 Data entrega
 Nome recebedor
+Campanha
 Nota Fiscal
 Conhec aéreo
 Conhec rodov
@@ -13,9 +14,25 @@ Estado
 entregador
 
 
+$nome_cliente
+$data_entrega
+$nome_recebedor
+$campanha
+$nota_fiscal
+$conhecimento_aereo
+$conhecimento_rodoviario
+$peso
+$qtd_volume
+$valor_a_receber
+$valor_pago
+$cidade
+$estado
+$entregador
+
 nome_cliente
 data_entrega
 nome_recebedor
+campanha
 nota_fiscal
 conhecimento_aereo
 conhecimento_rodoviario

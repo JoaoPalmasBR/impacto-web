@@ -34,12 +34,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="http://impacto.joaoantoniosantos.com.br/">Impacto Transportes</a>
+                    <a class="brand" href="http://impacto.joaoantoniosantos.com.br/">Impacto Transportes</a> 
+                    <!-- <a class="brand" href="http://localhost/joaoantoniosantos/impacto/">Impacto Transportes</a>-->
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="active"><a href="http://impacto.joaoantoniosantos.com.br/entregas/avulso/">Nova</a></li>
-                            <!-- <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li> -->
+                            <li><a href="http://impacto.joaoantoniosantos.com.br/entregas/avulso/lista">About</a></li>
+                            <!--<li class="active"><a href="http://localhost/joaoantoniosantos/impacto/entregas/avulso/">Nova</a></li>
+                            <li><a href="http://localhost/joaoantoniosantos/impacto/entregas/avulso/historico">Historico</a></li>-->
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -60,6 +62,9 @@
                 <label for="nome_recebedor" class="sr-only"><h1><small>Nome do Recebedor</small></h1></label>
                     <input type="text" id="nome_recebedor" name="nome_recebedor" class="form-control" placeholder="nome_recebedor">
                 
+                <label for="campanha" class="sr-only"><h1><small>Campanha</small></h1></label>
+                    <input type="text" id="campanha" name="campanha" class="form-control" placeholder="campanha">
+
                 <label for="nota_fiscal" class="sr-only"><h1><small>Nota Fiscal</small></h1></label>
                     <input type="text" id="nota_fiscal" name="nota_fiscal" class="form-control" placeholder="nota_fiscal">
                 

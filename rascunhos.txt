@@ -1,0 +1,54 @@
+/*
+                    echo '
+                        <div class="hero-unit">
+                            <ul class="nav nav-pills">
+                                <li class="active"><a>'.$id.' - '.$campanha.' - '.$nome_cliente.' - '.$data_entrega.'</a></li>
+                            </ul>
+                            <p>
+                                <dt>nome_cliente:</dt>
+                                    <dd>'.$nome_cliente.'</dd>
+                                <dt>data_entrega:</dt> 
+                                    <dd>'.$data_entrega.'</dd>
+                                <dt>nome_recebedor:</dt> 
+                                    <dd>'.$nome_recebedor.'</dd>
+                                <dt>campanha:</dt>
+                                    <dd>'.$campanha.'</dd>
+                                <dt>nota_fiscal:</dt>
+                                    <dd>'.$nota_fiscal.'</dd>
+                                <dt>conhecimento_aereo:</dt>
+                                    <dd>'.$conhecimento_aereo.'</dd>
+                                <dt>conhecimento_rodoviario:</dt>
+                                    <dd>'.$conhecimento_rodoviario.'</dd>
+                                <dt>peso:</dt>
+                                    <dd>'.$peso.'</dd>
+                                <dt>qtd_volume:</dt>
+                                    <dd>'.$qtd_volume.'</dd>
+                                <dt>valor_a_receber:</dt>
+                                    <dd>'.$valor_a_receber.'</dd>
+                                <dt>valor_pago:</dt>
+                                    <dd>'.$valor_pago.'</dd>
+                                <dt>cidade:</dt>
+                                    <dd>'.$cidade.'</dd>
+                                <dt>estado:</dt>
+                                    <dd>'.$estado.'</dd>
+                                <dt>entregador:</dt>
+                                    <dd>'.$entregador.'</dd>
+                            </p>
+                        </div>';*/
+
+
+//echo '<li>'.$row['nome_cliente'].'</li>';
+                    //echo '<li>'.$row['data_entrega'].'</li>';
+                    echo '<li>'.$row['nome_recebedor'].'</li>';
+                    //echo '<li>'.$row['campanha'].'</li>';
+                    echo '<li>'.$row['nota_fiscal'].'</li>';
+                    echo '<li>'.$row['conhecimento_aereo'].'</li>';
+                    echo '<li>'.$row['conhecimento_rodoviario'].'</li>';
+                    echo '<li>'.$row['peso'].'</li>';
+                    echo '<li>'.$row['qtd_volume'].'</li>';
+                    echo '<li>'.$row['valor_a_receber'].'</li>';
+                    echo '<li>'.$row['valor_pago'].'</li>';
+                    echo '<li>'.$row['cidade'].'</li>';
+                    echo '<li>'.$row['estado'].'</li>';
+                    echo '<li>'.$row['entregador'].'</li>';
+
