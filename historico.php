@@ -39,9 +39,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li><a href="http://impacto.joaoantoniosantos.com.br/entregas/avulso/">Nova</a></li>
-                            <li class="active"><a href="http://impacto.joaoantoniosantos.com.br/entregas/avulso/historico">Historico</a></li>
+                            <li class="active"><a href="http://impacto.joaoantoniosantos.com.br/entregas/avulso/historico.php">Historico</a></li>
                             <!--<li><a href="http://localhost/joaoantoniosantos/impacto/entregas/avulso/">Nova</a></li>
-                            <li class="active"><a href="http://localhost/joaoantoniosantos/impacto/entregas/avulso/historico">Historico</a></li>-->
+                            <li class="active"><a href="http://localhost/joaoantoniosantos/impacto/entregas/avulso/historico.php">Historico</a></li>-->
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
