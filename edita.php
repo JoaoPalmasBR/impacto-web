@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+<?php
+    $id=$_GET['id'];
+    echo $id.'<br>';
+    
+    $mysqli = new mysqli('localhost', 'root', '', 'impactotransportes');
+    //$mysqli = new MySQLi('joaoantoniosantos.com.br','joaoa870_joao','joaoantonio2012','joaoa870_impacto');
+    $query  = "SELECT * FROM avulsas where id='".$id."';";
+    $nome_cliente;$data_entrega;$nome_recebedor;$campanha;$nota_fiscal;$conhecimento_aereo;$conhecimento_rodoviario;
+    $peso;$qtd_volume;$valor_a_receber;$valor_pago;$cidade;$estado;$entregador;
+
+    if ($result = $mysqli->query($query)) {
+        if($result->num_rows === 0){
+            echo '<h1>Nao existe!</h1>';
+        }
+        else{
+            while ($row = $result->fetch_assoc()) {
+                $id=$row['id'];$nome_cliente=$row['nome_cliente'];$data_entrega=$row['data_entrega'];
+                $nome_recebedor=$row['nome_recebedor'];$campanha=$row['campanha'];$nota_fiscal=$row['nota_fiscal'];
+                $conhecimento_aereo=$row['conhecimento_aereo'];$conhecimento_rodoviario=$row['conhecimento_rodoviario'];
+                $peso=$row['peso'];$qtd_volume=$row['qtd_volume'];$valor_a_receber=$row['valor_a_receber'];
+                $valor_pago=$row['valor_pago'];$cidade=$row['cidade'];$estado=$row['estado'];$entregador=$row['entregador'];
+
+                echo $nome_cliente.', '.$data_entrega.', '.$nome_recebedor.', '.$campanha.', '.$nota_fiscal.', '.
+                $conhecimento_aereo.', '.$conhecimento_rodoviario.', '.$peso.', '.$qtd_volume.', '.$valor_a_receber.', '.
+                $valor_pago.', '.$cidade.', '.$estado.', '.$entregador.';';
+
+                echo '
+                <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -156,18 +183,8 @@
         <script src="bootstrap-carousel.js"></script>
         <script src="bootstrap-typeahead.js"></script>
     </body>
-</html>
-<!--
-Menus
-<ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#">Home</a></li>
-    <li role="presentation"><a href="#">Profile</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-</ul>
-
-<ol class="breadcrumb">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Library</a></li>
-    <li class="active">Data</li>
-</ol>
--->
+</html>';
+            }
+	    }
+    }    
+?>

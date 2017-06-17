@@ -49,8 +49,8 @@
         </div>
         <div class="container">
         <?php
-            //$mysqli = new mysqli('localhost', 'root', '', 'impactotransportes');
-            $mysqli = new MySQLi('joaoantoniosantos.com.br','joaoa870_joao','joaoantonio2012','joaoa870_impacto');
+            $mysqli = new mysqli('localhost', 'root', '', 'impactotransportes');
+            //$mysqli = new MySQLi('joaoantoniosantos.com.br','joaoa870_joao','joaoantonio2012','joaoa870_impacto');
             $query  = "SELECT * FROM avulsas ORDER BY id DESC";
             echo '
             <div class="alert">
@@ -101,7 +101,12 @@
                                             <li class="list-group-item"><strong>cidade:</strong> '.$cidade.'</li>
                                             <li class="list-group-item"><strong>estado:</strong> '.$estado.'</li>
                                             <li class="list-group-item"><strong>entregador:</strong> '.$entregador.'</li>
+                                            
+                                            <button class="btn btn-primary" type="button">
+                                            <a style="text-decoration:none; color: white;" href="edita.php?id='.$id.'">Editar <img src="edit-solid.png" style="height:20px;"></a>
+                                            </button>
                                         </ul>
+                                        
                                     </div>
                                 </div>
                             </div>
