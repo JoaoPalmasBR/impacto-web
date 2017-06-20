@@ -52,3 +52,25 @@
                     echo '<li>'.$row['estado'].'</li>';
                     echo '<li>'.$row['entregador'].'</li>';
 
+-    IMPACTO TRANSPORTES E LOGISTICA     
+-        M A ILARIO COMERCIO - ME        
+- 10.734.884/0001-61      (63)98476-5009 
+-         Palmas Tocantins Brasil        
+-----------------------------------------
+- Nome Cliente: 
+- Data Entrega: 
+- Nome Recebedor: 
+- Campanha: 
+- Nota Fiscal: 
+- Conhecimento Aéreo: 
+- Conhecimento Rodoviario: 
+- Peso: 
+- Quantidade Volumes:
+- Valor a Receber: 
+- Valor Pago: 
+- Cidade: 
+- Estado: 
+- Entregador: 
+- 
+- Exportado dia: 
+date("Y/m/d")

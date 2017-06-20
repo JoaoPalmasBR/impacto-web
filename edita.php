@@ -1,9 +1,9 @@
 <?php
     $id=$_GET['id'];
-    echo $id.'<br>';
+    //echo $id.'<br>';
     
-    $mysqli = new mysqli('localhost', 'root', '', 'impactotransportes');
-    //$mysqli = new MySQLi('joaoantoniosantos.com.br','joaoa870_joao','joaoantonio2012','joaoa870_impacto');
+    //$mysqli = new mysqli('localhost', 'root', '', 'impactotransportes');
+    $mysqli = new MySQLi('joaoantoniosantos.com.br','joaoa870_joao','joaoantonio2012','joaoa870_impacto');
     $query  = "SELECT * FROM avulsas where id='".$id."';";
     $nome_cliente;$data_entrega;$nome_recebedor;$campanha;$nota_fiscal;$conhecimento_aereo;$conhecimento_rodoviario;
     $peso;$qtd_volume;$valor_a_receber;$valor_pago;$cidade;$estado;$entregador;
@@ -19,11 +19,6 @@
                 $conhecimento_aereo=$row['conhecimento_aereo'];$conhecimento_rodoviario=$row['conhecimento_rodoviario'];
                 $peso=$row['peso'];$qtd_volume=$row['qtd_volume'];$valor_a_receber=$row['valor_a_receber'];
                 $valor_pago=$row['valor_pago'];$cidade=$row['cidade'];$estado=$row['estado'];$entregador=$row['entregador'];
-
-                echo $nome_cliente.', '.$data_entrega.', '.$nome_recebedor.', '.$campanha.', '.$nota_fiscal.', '.
-                $conhecimento_aereo.', '.$conhecimento_rodoviario.', '.$peso.', '.$qtd_volume.', '.$valor_a_receber.', '.
-                $valor_pago.', '.$cidade.', '.$estado.', '.$entregador.';';
-
                 echo '
                 <!DOCTYPE html>
 <html lang="en">
@@ -76,85 +71,56 @@
         </div>
         <div class="container">
             <div class="page-header">
-                <h1>Entregas Avulsas <small>Formulario de Registro de novas entregas feitas de forma avulsa.</small></h1>
+                <h1>Entregas Avulsas <small>Formulario de Edicao de entregas feitas de forma avulsa.</small></h1>
             </div>
-            <form class="form-signin" method="POST" autocomplete="off" action="envia.php">
+            <form class="form-signin" method="POST" autocomplete="off" action="editar.php">
 
+                <label for="id" class="sr-only"><h1><small>ID</small></h1></label>
+                    <input type="text" id="id" name="id" class="form-control" value="'.$id.'">
+                
                 <label for="nome_cliente" class="sr-only"><h1><small>Nome do Cliente</small></h1></label>
-                    <input type="text" pattern="[A-Za-z]+" id="nome_cliente" name="nome_cliente" class="form-control" placeholder="nome_cliente"> <!--autofocus -->
+                    <input type="text" pattern="[A-Za-z]+" id="nome_cliente" name="nome_cliente" class="form-control" value="'.$nome_cliente.'"> <!--autofocus -->
                 
                 <label for="data_entrega" class="sr-only"><h1><small>Data da Entrega</small></h1></label>
-                    <input type="date" id="data_entrega" name="data_entrega" class="form-control" placeholder="data_entrega" min="2017-06-01">
+                    <input type="date" id="data_entrega" name="data_entrega" class="form-control" value="'.$data_entrega.'" min="2017-06-01">
                 
                 <label for="nome_recebedor" class="sr-only"><h1><small>Nome do Recebedor</small></h1></label>
-                    <input type="text" id="nome_recebedor" name="nome_recebedor" class="form-control" placeholder="nome_recebedor">
+                    <input type="text" id="nome_recebedor" name="nome_recebedor" class="form-control" value="'.$nome_recebedor.'">
                 
                 <label for="campanha" class="sr-only"><h1><small>Campanha</small></h1></label>
-                    <input type="text" id="campanha" name="campanha" class="form-control" placeholder="campanha">
-
+                    <input type="text" id="campanha" name="campanha" class="form-control" value="'.$campanha.'">
+                
                 <label for="nota_fiscal" class="sr-only"><h1><small>Nota Fiscal</small></h1></label>
-                    <input type="text" id="nota_fiscal" name="nota_fiscal" class="form-control" placeholder="nota_fiscal">
+                    <input type="text" id="nota_fiscal" name="nota_fiscal" class="form-control" value="'.$nota_fiscal.'">
                 
                 <label for="conhecimento_aereo" class="sr-only"><h1><small>Conhecimento Aéreo</small></h1></label>
-                    <input type="text" id="conhecimento_aereo" name="conhecimento_aereo" class="form-control" placeholder="conhecimento_aereo">
+                    <input type="text" id="conhecimento_aereo" name="conhecimento_aereo" class="form-control" value="'.$conhecimento_aereo.'">
                 
                 <label for="conhecimento_rodoviario" class="sr-only"><h1><small>Conhecimento Rodoviário</small></h1></label>
-                    <input type="text" id="conhecimento_rodoviario" name="conhecimento_rodoviario" class="form-control" placeholder="conhecimento_rodoviario">
+                    <input type="text" id="conhecimento_rodoviario" name="conhecimento_rodoviario" class="form-control" value="'.$conhecimento_rodoviario.'">
                 
                 <label for="peso" class="sr-only"><h1><small>Peso</small></h1></label>
-                    <input type="number" id="peso" name="peso" class="form-control" placeholder="peso"> KG
+                    <input type="number" id="peso" name="peso" class="form-control" value="'.$peso.'"> KG
                 
                 <label for="qtd_volume" class="sr-only"><h1><small>Quantidade Volumes</small></h1></label>
-                    <input type="number" id="qtd_volume" name="qtd_volume" class="form-control" placeholder="qtd_volume" min="1"> Unid
+                    <input type="number" id="qtd_volume" name="qtd_volume" class="form-control" value="'.$qtd_volume.'" min="1"> Unid
                 
                 <label for="valor_a_receber" class="sr-only"><h1><small>Valor a Receber</small></h1></label>
-                    R$ <input type="number" min="0.00" max="10000.00" step="0.01" id="valor_a_receber" name="valor_a_receber" class="form-control" placeholder="valor_a_receber">
-                
+                    R$ <input type="number" min="0.00" max="10000.00" step="0.01" id="valor_a_receber" name="valor_a_receber" class="form-control" value="'.$valor_a_receber.'">
+
                 <label for="valor_pago" class="sr-only"><h1><small>Valor Pago</small></h1></label>
-                    R$ <input type="number" min="0.00" max="10000.00" step="0.01" id="valor_pago" name="valor_pago" class="form-control" placeholder="valor_pago">
-                    
+                    R$ <input type="number" min="0.00" max="10000.00" step="0.01" id="valor_pago" name="valor_pago" class="form-control" value="'.$valor_pago.'">                    
                 
                 <label for="cidade" class="sr-only"><h1><small>Cidade</small></h1></label>
-                    <input type="text" id="cidade" name="cidade" class="form-control" placeholder="cidade">
-                
+                    <input type="text" id="cidade" name="cidade" class="form-control" value="'.$cidade.'">
+
                 <label for="estado" class="sr-only"><h1><small>Estado</small></h1></label>
-                    <select id="estado" name="estado" class="form-control">
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espirito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO" selected="selected">Tocantins</option>
-                    </select>
+                    <input type="text" id="estado" name="estado" class="form-control" value="'.$estado.'">
+                    
                 <label for="entregador" class="sr-only"><h1><small>Entregador</small></h1></label>
-                    <label>
-                        <select id="entregador" name="entregador">
-                            <option value="marco" selected="selected">Marco</option>
-                            <option value="joao">Joao</option>
-                        </select>
-                    </label>
-                <input class="btn btn-lg btn-primary btn-block" type="submit"/>
+                    <input type="text" id="entregador" name="entregador" class="form-control" value="'.$entregador.'">
+
+                <input class="btn btn-lg btn-primary btn-block" type="submit" value="Atualiza"/>
                 <input type="reset">
             </form>
             <div class="jumbotron">
