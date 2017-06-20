@@ -22,7 +22,8 @@
 
                 // Abre ou cria o arquivo bloco1.txt
                 // "a" representa que o arquivo é aberto para ser escrito
-                $file = fopen("export_$id.txt", "w");
+                $nome="export_$id.txt";
+                $file = fopen($nome, "w");
                 // Escreve "exemplo de escrita" no bloco1.txt
                 //fwrite($file, "texto\r\n");
                 $conteudo="-    IMPACTO TRANSPORTES E LOGISTICA     
@@ -52,8 +53,36 @@
                 fwrite($file, $conteudo);
                 // Fecha o arquivo
                 fclose($file);
-                header('location: http://impacto.joaoantoniosantos.com.br/entregas/avulso/historico.php');
-            }
-	    }
-    }    
+                //header("location: http://localhost/joaoantoniosantos/impacto/entregas/avulso/export_$id.txt");
+                
+                // Define o tempo máximo de execução em 0 para as conexões lentas
+                set_time_limit(0);
+                // Arqui você faz as validações e/ou pega os dados do banco de dados
+                $aquivoNome = "export_$id.txt"; // nome do arquivo que será enviado p/ download
+                //$arquivoLocal = 'C:\wamp64\www\joaoantoniosantos\impacto\entregas\avulso/'.$aquivoNome; // caminho absoluto do arquivo
+                $arquivoLocal = '/home/joaoa870/public_html/impacto/entregas/avulso/'.$aquivoNome; // caminho absoluto do arquivo
+                
+                // Verifica se o arquivo não existe
+                if (!file_exists($arquivoLocal)) {
+                    // Exiba uma mensagem de erro caso ele não exista
+                    exit;
+                }
+                // Aqui você pode aumentar o contador de downloads
+                // Definimos o novo nome do arquivo
+                $novoNome = "export_".$id."_".date("d/m/Y").".txt";
+                // Configuramos os headers que serão enviados para o browser
+                header('Content-Description: File Transfer');
+                header('Content-Disposition: attachment; filename="'.$novoNome.'"');
+                header('Content-Type: application/octet-stream');
+                header('Content-Transfer-Encoding: binary');
+                header('Content-Length: ' . filesize($aquivoNome));
+                header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+                header('Pragma: public');
+                header('Expires: 0');
+                // Envia o arquivo para o cliente
+                readfile($aquivoNome);
+                        }
+                    }
+                }
+                unlink($nome);
 ?>
