@@ -54,7 +54,7 @@
             <form class="form-signin" method="POST" autocomplete="off" action="envia.php">
 
                 <label for="nome_cliente" class="sr-only"><h1><small>Nome do Cliente</small></h1></label>
-                    <input type="text" pattern="[A-Za-z]+" id="nome_cliente" name="nome_cliente" class="form-control" placeholder="nome_cliente"> <!--autofocus -->
+                    <input type="text" id="nome_cliente" name="nome_cliente" class="form-control" placeholder="nome_cliente"> <!--autofocus -->
                 
                 <label for="data_entrega" class="sr-only"><h1><small>Data da Entrega</small></h1></label>
                     <input type="date" id="data_entrega" name="data_entrega" class="form-control" placeholder="data_entrega" min="2017-06-01">

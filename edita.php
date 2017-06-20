@@ -79,7 +79,7 @@
                     <input type="text" id="id" name="id" class="form-control" value="'.$id.'">
                 
                 <label for="nome_cliente" class="sr-only"><h1><small>Nome do Cliente</small></h1></label>
-                    <input type="text" pattern="[A-Za-z]+" id="nome_cliente" name="nome_cliente" class="form-control" value="'.$nome_cliente.'"> <!--autofocus -->
+                    <input type="text" id="nome_cliente" name="nome_cliente" class="form-control" value="'.$nome_cliente.'"> <!--autofocus -->
                 
                 <label for="data_entrega" class="sr-only"><h1><small>Data da Entrega</small></h1></label>
                     <input type="date" id="data_entrega" name="data_entrega" class="form-control" value="'.$data_entrega.'" min="2017-06-01">

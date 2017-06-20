@@ -55,7 +55,7 @@
             echo '
             <div class="alert">
                 <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>Padrão do Titulo: <br></strong> Campanha - Nome do Cliente - Data da Entrega
+                <strong>Padrão do Titulo: <br></strong>ID - Campanha - Nome do Cliente - Data da Entrega
             </div>';
 			if ($result = $mysqli->query($query)) {
 				while ($row = $result->fetch_assoc()) {
@@ -108,6 +108,10 @@
 
                                             <button class="btn btn-primary" type="button">
                                             <a style="text-decoration:none; color: white;" href="exporta.php?id='.$id.'">Exportar <img src="export-solid.png" style="height:20px;"></a>
+                                            </button>
+
+                                            <button class="btn btn-primary" type="button">
+                                            <a style="text-decoration:none; color: white;" href="exclui.php?id='.$id.'">Excluir <img src="exclui-solid.png" style="height:20px;"></a>
                                             </button>
                                         </ul>
                                         
